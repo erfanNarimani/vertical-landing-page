@@ -1,0 +1,126 @@
+:root {
+  --main-color: rgb(78, 156, 167);
+  --white-color: hsl(0, 0%, 100%);
+  --red-color: hsl(4, 75%, 41%);
+  --black-color: hsl(240, 22%, 4%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.showcase {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  color: black;
+  overflow: hidden;
+  display: flex;
+}
+.left-col {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 50%;
+  height: 100%;
+  width: 50%;
+  transition: transform 0.9s ease-in-out;
+}
+
+.left-col > div {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+}
+.right-col {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: transform 0.9s ease-in-out;
+}
+.right-col > div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-col h1 {
+  font-size: 4rem;
+}
+
+.nav-item {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  z-index: 100;
+}
+.btn {
+  cursor: pointer;
+}
+
+.white-list-item {
+  color: var(--white-color);
+}
+
+.next-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--red-color);
+}
+.previous-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--white-color);
+}
+
+.red {
+  color: var(--red-color);
+}
+
+.title {
+  font-size: 4rem;
+  color: var(--red-color);
+  transition: transform 0.9s ease-in-out;
+}
+.sub-title {
+  font-size: 2rem;
+  margin-top: 2rem;
+  color: var(--black-color);
+}
+
+/* fading title & sub title animation */
+
+.fading {
+  animation: fade 1s linear 0.5s;
+}
+.green {
+  color: aqua;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
